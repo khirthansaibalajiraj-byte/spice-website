@@ -150,7 +150,28 @@ footer{
 
 <h2>Customer Details</h2>
 <input type="text" name="Customer Name" placeholder="Your Name" required><br>
+    <input 
+  type="text" 
+  name="name" 
+  placeholder="Your Name"
+  maxlength="20"
+  required>
+
 <input type="text" name="Phone Number" placeholder="Phone Number" required><br>
+    <input 
+  type="tel" 
+  name="phone" 
+  placeholder="Phone Number"
+  pattern="[0-9]{10}" 
+  maxlength="10"
+  inputmode="numeric"
+  required>
+
+<script>
+document.querySelector('input[name="phone"]').addEventListener('input', function () {
+  this.value = this.value.replace(/\D/g, '').slice(0, 10);
+});
+</script>
 
 <h2>Select Your Products</h2>
 
