@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Spice Blends</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f8f8f8;
+        }
+        h1 {
+            text-align: center;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        .options {
+            margin-left: 20px;
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function toggleOptions(id) {
+            var element = document.getElementById(id);
+            element.style.display = element.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+
+<h1>Fresh Custom Spice Blends</h1>
+
+<form action="https://formsubmit.co/khirthansaibalajiraj.com" method="POST">
+
+<div class="product">
+    <input type="checkbox" onclick="toggleOptions('chilliOptions')"> Chilli Powder
+    <div id="chilliOptions" class="options">
+        Coarseness:
+        <select name="Chilli Coarseness">
+            <option>Fine</option>
+            <option>Medium</option>
+            <option>Coarse</option>
+        </select><br><br>
+        Quantity:
+        <select name="Chilli Quantity">
+            <option>100g</option>
+            <option>250g</option>
+            <option>500g</option>
+            <option>1kg</option>
+        </select><br><br>
+        Spice Level:
+        <select name="Chilli Spice Level">
+            <option>Mild</option>
+            <option>Medium</option>
+            <option>Spicy</option>
+            <option>Very Spicy</option>
+        </select>
+    </div>
+</div>
+
+<div class="product">
+    <input type="checkbox" onclick="toggleOptions('sambarOptions')"> Sambar Powder
+    <div id="sambarOptions" class="options">
+        Coarseness:
+        <select name="Sambar Coarseness">
+            <option>Fine</option>
+            <option>Medium</option>
+            <option>Coarse</option>
+        </select><br><br>
+        Quantity:
+        <select name="Sambar Quantity">
+            <option>100g</option>
+            <option>250g</option>
+            <option>500g</option>
+            <option>1kg</option>
+        </select><br><br>
+        Spice Level:
+        <select name="Sambar Spice Level">
+            <option>Mild</option>
+            <option>Medium</option>
+            <option>Spicy</option>
+            <option>Very Spicy</option>
+        </select>
+    </div>
+</div>
+
+<br>
+<button type="submit">Submit Order</button>
+
+</form>
+
+</body>
+</html>
 
