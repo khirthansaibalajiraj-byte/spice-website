@@ -155,7 +155,13 @@ footer{
   name="name" 
   placeholder="Your Name"
   maxlength="20"
+  style="text-transform: uppercase;"
   required>
+<script>
+document.querySelector('input[name="name"]').addEventListener('input', function () {
+  this.value = this.value.toUpperCase().slice(0, 20);
+});
+</script>
 
 
     <input 
