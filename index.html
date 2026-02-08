@@ -196,10 +196,6 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 <div class="product">
     <input type="checkbox" onclick="toggleOptions('chilli')"> Chilli Powder
     <div id="chilli" class="options">
-        Coarseness:
-        <select name="Chilli Coarseness">
-            <option>Fine</option><option>Medium</option><option>Coarse</option>
-        </select><br>
         Quantity:
         <select name="Chilli Quantity">
             <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
@@ -214,10 +210,6 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 <div class="product">
     <input type="checkbox" onclick="toggleOptions('turmeric')"> Turmeric Powder
     <div id="turmeric" class="options">
-        Coarseness:
-        <select name="Turmeric Coarseness">
-            <option>Fine</option><option>Medium</option><option>Coarse</option>
-        </select><br>
         Quantity:
         <select name="Turmeric Quantity">
             <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
@@ -230,7 +222,7 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
     <div id="pepper" class="options">
         Coarseness:
         <select name="Pepper Coarseness">
-            <option>Fine</option><option>Medium</option><option>Coarse</option>
+            <option>whole</option><option>Medium</option><option>fine</option>
         </select><br>
         Quantity:
         <select name="Pepper Quantity">
@@ -242,28 +234,16 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 <div class="product">
     <input type="checkbox" onclick="toggleOptions('garam')"> Garam Masala
     <div id="garam" class="options">
-        Coarseness:
-        <select name="Garam Masala Coarseness">
-            <option>Fine</option><option>Medium</option><option>Coarse</option>
-        </select><br>
         Quantity:
         <select name="Garam Masala Quantity">
             <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
         </select><br>
-        Spice Level:
-        <select name="Garam Masala Spice Level">
-            <option>Mild</option><option>Medium</option><option>Spicy</option><option>Very Spicy</option>
-        </select>
     </div>
 </div>
 
 <div class="product">
     <input type="checkbox" onclick="toggleOptions('sambar')"> Sambar Powder
     <div id="sambar" class="options">
-        Coarseness:
-        <select name="Sambar Coarseness">
-            <option>Fine</option><option>Medium</option><option>Coarse</option>
-        </select><br>
         Quantity:
         <select name="Sambar Quantity">
             <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
@@ -278,13 +258,13 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 <div class="product">
     <input type="checkbox" onclick="toggleOptions('rasam')"> Rasam Powder
     <div id="rasam" class="options">
-        Coarseness:
-        <select name="Rasam Coarseness">
-            <option>Fine</option><option>Medium</option><option>Coarse</option>
-        </select><br>
         Quantity:
         <select name="Rasam Quantity">
             <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
+        </select>
+        Spice Level:
+        <select name="Rasam Spice Level">
+            <option>Mild</option><option>Medium</option><option>Spicy</option><option>Very Spicy</option>
         </select>
     </div>
 </div>
@@ -296,6 +276,11 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
         <select name="Pappu Podi Quantity">
             <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
         </select>
+        Spice Level:
+        <select name="Pappu Podi Spice Level">
+            <option>Mild</option><option>Medium</option><option>Spicy</option><option>Very Spicy</option>
+        </select>
+    </div>
     </div>
 </div>
 
@@ -306,6 +291,11 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
         <select name="Peanut Podi Quantity">
             <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
         </select>
+        Spice Level:
+        <select name="Peanut Podi Spice Level">
+            <option>Mild</option><option>Medium</option><option>Spicy</option><option>Very Spicy</option>
+        </select>
+    </div>
     </div>
 </div>
 </div>
