@@ -113,14 +113,38 @@ footer{
 
 <body>
 
-<header style="text-align:center;padding:30px;background:linear-gradient(90deg,#7a1f1f,#c75b12);color:white;">
-    
-    <img src="logo.png" alt="VMS Logo" style="width:180px;height:auto;display:block;margin:0 auto 15px auto;">
+<header style="
+    background-image: url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+">
 
-    <h1 style="margin:0;font-size:36px;">VMS Custom Spice Blends</h1>
-    <p style="margin:5px 0 0 0;font-size:18px;">You Name It. We Make It.</p>
+    <!-- Dark overlay for readability -->
+    <div style="
+        position:absolute;
+        top:0;left:0;
+        width:100%;height:100%;
+        background: rgba(0,0,0,0.55);
+        z-index:0;">
+    </div>
+
+    <!-- Content -->
+    <div style="position:relative; z-index:1;">
+        <img src="logo.png" alt="VMS Logo"
+             style="width:180px;height:auto;margin-bottom:15px;">
+
+        <h1 style="font-size:40px;margin:0;">VMS Custom Spice Blends</h1>
+        <p style="font-size:20px;margin-top:10px;">
+            Freshly Ground Spices Made Just For You
+        </p>
+    </div>
 
 </header>
+
 
 
 
