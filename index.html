@@ -103,12 +103,40 @@ footer{
 </style>
 
 
-    <script>
-        function toggleOptions(id){
-            var x=document.getElementById(id);
-            x.style.display=(x.style.display==="block")?"none":"block";
-        }
-    </script>
+  <script>
+function toggleOptions(id, checkbox){
+    var box = document.getElementById(id);
+    var selects = box.querySelectorAll("select");
+
+    if(checkbox.checked){
+        box.style.display = "block";
+        selects.forEach(s => {
+            s.removeAttribute("disabled");   // Enable for submission
+            s.setAttribute("required", "required");
+        });
+    } else {
+        box.style.display = "none";
+        selects.forEach(s => {
+            s.setAttribute("disabled", "disabled"); // Disable so not submitted
+            s.removeAttribute("required");
+        });
+    }
+}
+
+window.onload = function(){
+    document.querySelector('input[name="name"]').addEventListener('input', function () {
+        this.value = this.value.toUpperCase().slice(0, 20);
+    });
+
+    document.querySelector('input[name="phone"]').addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, '').slice(0, 10);
+    });
+
+    // On page load, disable all selects by default
+    document.querySelectorAll('.options select').forEach(s => s.setAttribute("disabled","disabled"));
+}
+</script>
+
 </head>
 <link rel="icon" href="logo.png">
 
@@ -194,7 +222,7 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 <div class="products-grid">
 
 <div class="product">
-    <input type="checkbox" onclick="toggleOptions('chilli')"> Chilli Powder
+    <input type="checkbox" onclick="toggleOptions('chilli',this)"> Chilli Powder
     <div id="chilli" class="options">
         Quantity:
         <select name="Chilli Quantity">
@@ -208,7 +236,7 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 </div>
 
 <div class="product">
-    <input type="checkbox" onclick="toggleOptions('turmeric')"> Turmeric Powder
+    <input type="checkbox" onclick="toggleOptions('turmeric',this)"> Turmeric Powder
     <div id="turmeric" class="options">
         Quantity:
         <select name="Turmeric Quantity">
@@ -218,7 +246,7 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 </div>
 
 <div class="product">
-    <input type="checkbox" onclick="toggleOptions('pepper')"> Pepper Powder
+    <input type="checkbox" onclick="toggleOptions('pepper',this)"> Pepper Powder
     <div id="pepper" class="options">
         Coarseness:
         <select name="Pepper Coarseness">
@@ -232,7 +260,7 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 </div>
 
 <div class="product">
-    <input type="checkbox" onclick="toggleOptions('garam')"> Garam Masala
+    <input type="checkbox" onclick="toggleOptions('garam',this)"> Garam Masala
     <div id="garam" class="options">
         Quantity:
         <select name="Garam Masala Quantity">
@@ -242,7 +270,7 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 </div>
 
 <div class="product">
-    <input type="checkbox" onclick="toggleOptions('sambar')"> Sambar Powder
+    <input type="checkbox" onclick="toggleOptions('sambar',this)"> Sambar Powder
     <div id="sambar" class="options">
         Quantity:
         <select name="Sambar Quantity">
@@ -256,7 +284,7 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 </div>
 
 <div class="product">
-    <input type="checkbox" onclick="toggleOptions('rasam')"> Rasam Powder
+    <input type="checkbox" onclick="toggleOptions('rasam',this)"> Rasam Powder
     <div id="rasam" class="options">
         Quantity:
         <select name="Rasam Quantity">
@@ -270,7 +298,7 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 </div>
 
 <div class="product">
-    <input type="checkbox" onclick="toggleOptions('pappu')"> Pappu Podi
+    <input type="checkbox" onclick="toggleOptions('pappu',this)"> Pappu Podi
     <div id="pappu" class="options">
         Quantity:
         <select name="Pappu Podi Quantity">
@@ -284,7 +312,7 @@ document.querySelector('input[name="phone"]').addEventListener('input', function
 </div>
 
 <div class="product">
-    <input type="checkbox" onclick="toggleOptions('peanut')"> Peanut Podi
+    <input type="checkbox" onclick="toggleOptions('peanut',this)"> Peanut Podi
     <div id="peanut" class="options">
         Quantity:
         <select name="Peanut Podi Quantity">
