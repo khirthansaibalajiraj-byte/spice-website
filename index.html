@@ -2,57 +2,76 @@
 <html>
 <head>
     <title>Fresh Custom Spice Blends</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
+        body{
+            font-family: 'Poppins', sans-serif;
+            margin:0;
+            background: #fff8f0;
+            color:#333;
         }
-        header {
-            background: #8b0000;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        header{
+            background: linear-gradient(90deg,#8b0000,#d2691e);
+            color:white;
+            padding:40px 20px;
+            text-align:center;
         }
-        section {
-            padding: 20px 40px;
+        header h1{
+            margin:0;
+            font-size:40px;
         }
-        .product {
-            background: white;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 5px #ccc;
+        section{
+            padding:30px 60px;
         }
-        .options {
-            margin-top: 10px;
-            display: none;
+        h2{
+            border-left:6px solid #d2691e;
+            padding-left:10px;
         }
-        select {
-            margin: 5px 0;
-            padding: 5px;
+        .product{
+            background:white;
+            margin:20px 0;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+            transition:0.3s;
         }
-        button {
-            padding: 12px 25px;
-            font-size: 16px;
-            background: #8b0000;
-            color: white;
-            border: none;
-            border-radius: 5px;
+        .product:hover{
+            transform:scale(1.02);
         }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+        .options{
+            margin-top:15px;
+            display:none;
+        }
+        select, input{
+            padding:8px;
+            margin:8px 0;
+            width:220px;
+        }
+        button{
+            background:#8b0000;
+            color:white;
+            padding:15px 30px;
+            font-size:18px;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+        }
+        button:hover{
+            background:#d2691e;
+        }
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
         }
     </style>
 
     <script>
-        function toggleOptions(id) {
-            var x = document.getElementById(id);
-            x.style.display = (x.style.display === "block") ? "none" : "block";
+        function toggleOptions(id){
+            var x=document.getElementById(id);
+            x.style.display=(x.style.display==="block")?"none":"block";
         }
     </script>
 </head>
@@ -61,18 +80,15 @@
 
 <header>
     <h1>Fresh Custom Spice Blends</h1>
-    <p>Choose your spices. Choose your grind. Choose your spice level.</p>
+    <p>Authentic. Freshly Ground. Made to Your Taste.</p>
 </header>
 
 <section>
-<form action="https://formsubmit.co/khirthansaibalajiraj@gmail.com" method="POST">
+<form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST">
 
 <h2>Customer Details</h2>
-Name:<br>
-<input type="text" name="Customer Name" required><br><br>
-
-Phone Number:<br>
-<input type="text" name="Phone Number" required><br><br>
+<input type="text" name="Customer Name" placeholder="Your Name" required><br>
+<input type="text" name="Phone Number" placeholder="Phone Number" required><br>
 
 <h2>Select Your Products</h2>
 
@@ -215,6 +231,28 @@ Taste the difference of freshly made spices crafted just for you.
 
 </body>
 </html>
+
+<br><br>
+<button type="submit">Place My Custom Order</button>
+</form>
+</section>
+
+<section>
+<h2>About Our Company</h2>
+<p>
+We prepare traditional homemade spice blends using premium quality ingredients.
+Each order is freshly ground and customized exactly to your preference,
+bringing authentic taste directly to your kitchen.
+</p>
+</section>
+
+<footer>
+© 2026 Fresh Custom Spice Blends | Made with passion
+</footer>
+
+</body>
+</html>
+
 
 
 
