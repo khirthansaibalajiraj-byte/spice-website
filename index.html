@@ -1,100 +1,217 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Custom Spice Blends</title>
+    <title>Fresh Custom Spice Blends</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f8f8f8;
+            margin: 0;
+            background: #f4f4f4;
         }
-        h1 {
+        header {
+            background: #8b0000;
+            color: white;
+            padding: 20px;
             text-align: center;
+        }
+        section {
+            padding: 20px 40px;
         }
         .product {
             background: white;
             padding: 15px;
-            margin: 10px 0;
+            margin: 15px 0;
             border-radius: 8px;
+            box-shadow: 0 0 5px #ccc;
         }
         .options {
-            margin-left: 20px;
+            margin-top: 10px;
             display: none;
         }
+        select {
+            margin: 5px 0;
+            padding: 5px;
+        }
         button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 16px;
+            background: #8b0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
         }
     </style>
+
     <script>
         function toggleOptions(id) {
-            var element = document.getElementById(id);
-            element.style.display = element.style.display === "none" ? "block" : "none";
+            var x = document.getElementById(id);
+            x.style.display = (x.style.display === "block") ? "none" : "block";
         }
     </script>
 </head>
+
 <body>
 
-<h1>Fresh Custom Spice Blends</h1>
+<header>
+    <h1>Fresh Custom Spice Blends</h1>
+    <p>Choose your spices. Choose your grind. Choose your spice level.</p>
+</header>
 
+<section>
 <form action="https://formsubmit.co/khirthansaibalajiraj.com" method="POST">
 
+<h2>Customer Details</h2>
+Name:<br>
+<input type="text" name="Customer Name" required><br><br>
+
+Phone Number:<br>
+<input type="text" name="Phone Number" required><br><br>
+
+<h2>Select Your Products</h2>
+
+
+
+
 <div class="product">
-    <input type="checkbox" onclick="toggleOptions('chilliOptions')"> Chilli Powder
-    <div id="chilliOptions" class="options">
+    <input type="checkbox" onclick="toggleOptions('chilli')"> Chilli Powder
+    <div id="chilli" class="options">
         Coarseness:
         <select name="Chilli Coarseness">
-            <option>Fine</option>
-            <option>Medium</option>
-            <option>Coarse</option>
-        </select><br><br>
+            <option>Fine</option><option>Medium</option><option>Coarse</option>
+        </select><br>
         Quantity:
         <select name="Chilli Quantity">
-            <option>100g</option>
-            <option>250g</option>
-            <option>500g</option>
-            <option>1kg</option>
-        </select><br><br>
+            <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
+        </select><br>
         Spice Level:
         <select name="Chilli Spice Level">
-            <option>Mild</option>
-            <option>Medium</option>
-            <option>Spicy</option>
-            <option>Very Spicy</option>
+            <option>Mild</option><option>Medium</option><option>Spicy</option><option>Very Spicy</option>
         </select>
     </div>
 </div>
 
 <div class="product">
-    <input type="checkbox" onclick="toggleOptions('sambarOptions')"> Sambar Powder
-    <div id="sambarOptions" class="options">
+    <input type="checkbox" onclick="toggleOptions('turmeric')"> Turmeric Powder
+    <div id="turmeric" class="options">
         Coarseness:
-        <select name="Sambar Coarseness">
-            <option>Fine</option>
-            <option>Medium</option>
-            <option>Coarse</option>
-        </select><br><br>
+        <select name="Turmeric Coarseness">
+            <option>Fine</option><option>Medium</option><option>Coarse</option>
+        </select><br>
         Quantity:
-        <select name="Sambar Quantity">
-            <option>100g</option>
-            <option>250g</option>
-            <option>500g</option>
-            <option>1kg</option>
-        </select><br><br>
-        Spice Level:
-        <select name="Sambar Spice Level">
-            <option>Mild</option>
-            <option>Medium</option>
-            <option>Spicy</option>
-            <option>Very Spicy</option>
+        <select name="Turmeric Quantity">
+            <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
         </select>
     </div>
 </div>
 
-<br>
-<button type="submit">Submit Order</button>
+<div class="product">
+    <input type="checkbox" onclick="toggleOptions('pepper')"> Pepper Powder
+    <div id="pepper" class="options">
+        Coarseness:
+        <select name="Pepper Coarseness">
+            <option>Fine</option><option>Medium</option><option>Coarse</option>
+        </select><br>
+        Quantity:
+        <select name="Pepper Quantity">
+            <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
+        </select>
+    </div>
+</div>
 
+<div class="product">
+    <input type="checkbox" onclick="toggleOptions('garam')"> Garam Masala
+    <div id="garam" class="options">
+        Coarseness:
+        <select name="Garam Masala Coarseness">
+            <option>Fine</option><option>Medium</option><option>Coarse</option>
+        </select><br>
+        Quantity:
+        <select name="Garam Masala Quantity">
+            <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
+        </select><br>
+        Spice Level:
+        <select name="Garam Masala Spice Level">
+            <option>Mild</option><option>Medium</option><option>Spicy</option><option>Very Spicy</option>
+        </select>
+    </div>
+</div>
+
+<div class="product">
+    <input type="checkbox" onclick="toggleOptions('sambar')"> Sambar Powder
+    <div id="sambar" class="options">
+        Coarseness:
+        <select name="Sambar Coarseness">
+            <option>Fine</option><option>Medium</option><option>Coarse</option>
+        </select><br>
+        Quantity:
+        <select name="Sambar Quantity">
+            <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
+        </select><br>
+        Spice Level:
+        <select name="Sambar Spice Level">
+            <option>Mild</option><option>Medium</option><option>Spicy</option><option>Very Spicy</option>
+        </select>
+    </div>
+</div>
+
+<div class="product">
+    <input type="checkbox" onclick="toggleOptions('rasam')"> Rasam Powder
+    <div id="rasam" class="options">
+        Coarseness:
+        <select name="Rasam Coarseness">
+            <option>Fine</option><option>Medium</option><option>Coarse</option>
+        </select><br>
+        Quantity:
+        <select name="Rasam Quantity">
+            <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
+        </select>
+    </div>
+</div>
+
+<div class="product">
+    <input type="checkbox" onclick="toggleOptions('pappu')"> Pappu Podi
+    <div id="pappu" class="options">
+        Quantity:
+        <select name="Pappu Podi Quantity">
+            <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
+        </select>
+    </div>
+</div>
+
+<div class="product">
+    <input type="checkbox" onclick="toggleOptions('peanut')"> Peanut Podi
+    <div id="peanut" class="options">
+        Quantity:
+        <select name="Peanut Podi Quantity">
+            <option>100g</option><option>250g</option><option>500g</option><option>1kg</option>
+        </select>
+    </div>
+</div>
+
+<br><br>
+<button type="submit">Submit Order</button>
 </form>
+</section>
+
+<section>
+<h2>About Our Company</h2>
+<p>
+We prepare traditional homemade spice blends using high-quality ingredients.
+Every order is freshly ground and customized exactly to your preference.
+Taste the difference of freshly made spices crafted just for you.
+</p>
+</section>
+
+<footer>
+    © 2026 Fresh Custom Spice Blends
+</footer>
 
 </body>
 </html>
